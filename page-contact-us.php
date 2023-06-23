@@ -26,11 +26,11 @@ get_header(); ?>
 				<div class="tastingRoomDetails">
 					<div class="locationdetailsLineItem">
 						<img class="locationDetailsIcon" src="<?php echo get_stylesheet_directory_uri() . '/graphics/telephone.png'; ?>" />
-						<a class="locationPhone" href="tel:<?php get_field('sms_phone_number_wo_seperators','option'); ?>"><?php echo get_field('sms_phone_number','option'); ?></a>
+						<a class="locationPhone" href="tel:<?php echo get_field('sms_phone_number_wo_seperators','option'); ?>"><?php echo get_field('sms_phone_number','option'); ?></a>
 					</div>
 					<div class="locationdetailsLineItem">
 						<img class="locationDetailsIcon" src="<?php echo get_stylesheet_directory_uri() . '/graphics/speech-bubble-with-text-lines.png'; ?>" />
-						<a class="locationText" href="sms:<?php get_field('sms_phone_number_wo_seperators','option'); ?>"><?php echo get_field('sms_phone_number','option'); ?></a>
+						<a class="locationText" href="sms:<?php echo get_field('sms_phone_number_wo_seperators','option'); ?>"><?php echo get_field('sms_phone_number','option'); ?></a>
 					</div>
 					<div class="locationdetailsLineItem">
 						<img class="locationDetailsIcon" src="<?php echo get_stylesheet_directory_uri() . '/graphics/arroba.png'; ?>" />
@@ -38,7 +38,7 @@ get_header(); ?>
 					</div>
 					<div class="locationdetailsLineItem">
 						<img class="locationDetailsIcon" src="<?php echo get_stylesheet_directory_uri() . '/graphics/arroba.png'; ?>" />
-						<a class="locationText" href="mailto:<?php echo get_field('main_email_address','option'); ?>">Inquire About Space Rentals</a>
+						<a class="locationText" href="#forminator-module-4170">Inquire About Space Rentals</a>
 					</div>
 				</div>
 			</div>
@@ -51,7 +51,7 @@ get_header(); ?>
 					</div>
 					<div class="locationdetailsLineItem">
 						<img class="locationDetailsIcon" src="<?php echo get_stylesheet_directory_uri() . '/graphics/speech-bubble-with-text-lines.png'; ?>" />
-						<a class="locationText" href="sms:<?php get_field('sms_phone_number_wo_seperators','option'); ?>"><?php echo get_field('sms_phone_number','option'); ?></a>
+						<a class="locationText" href="sms:<?php echo get_field('sms_phone_number_wo_seperators','option'); ?>"><?php echo get_field('sms_phone_number','option'); ?></a>
 					</div>
 					<div class="locationdetailsLineItem">
 						<img class="locationDetailsIcon" src="<?php echo get_stylesheet_directory_uri() . '/graphics/arroba.png'; ?>" />
@@ -72,7 +72,7 @@ get_header(); ?>
 					</div>
 					<div class="locationdetailsLineItem">
 						<img class="locationDetailsIcon" src="<?php echo get_stylesheet_directory_uri() . '/graphics/speech-bubble-with-text-lines.png'; ?>" />
-						<a class="locationText" href="sms:<?php get_field('sms_phone_number_wo_seperators','option'); ?>"><?php echo get_field('sms_phone_number','option'); ?></a>
+						<a class="locationText" href="sms:<?php echo get_field('sms_phone_number_wo_seperators','option'); ?>"><?php echo get_field('sms_phone_number','option'); ?></a>
 					</div>
 					<div class="locationdetailsLineItem">
 						<img class="locationDetailsIcon" src="<?php echo get_stylesheet_directory_uri() . '/graphics/arroba.png'; ?>" />
@@ -86,8 +86,10 @@ get_header(); ?>
 			</div>
 		</div>
 
-		<div>
-			<?php echo do_shortcode('[wpforms id="3947" title="false"]'); ?>
+		<div class="contact-form">
+			<div class="form-title">Need to Contact Us? Looking for a space rental?</div>
+			<div class="form-sub-title">Fill out the form below and we will contact you soon!</div>
+			<?php echo do_shortcode('[forminator_form id="4170"]'); ?>
 		</div>
 		
 	</div><!-- #primary -->
