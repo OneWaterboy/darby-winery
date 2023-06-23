@@ -96,6 +96,7 @@ get_header(); ?>
 								<div class="tastingWineTitle"><?php echo get_sub_field('wine_name'); ?></div>
 								<div class="wineDescritption flipCardDetails"><?php echo get_sub_field('wine_description'); ?></div>
 								<div class="foodPairings flipCardDetails"><span>Food Pairings:</span><?php echo get_sub_field('food_pairings'); ?></div>
+								<div class="bottle price flipCardDetails"><span>Price Per Bottle: $</span><?php echo get_sub_field('bottle_price'); ?></div>
 							</div>
 						</div>
 					</div> 

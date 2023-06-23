@@ -81,7 +81,8 @@ body {
     padding: 5px 30px;
 }
 
-.flipCardDetails span:first-child {
+.flipCardDetails span:first-child,
+.bottle.price {
     font-size: 18px;
     font-weight: bold;
     margin-right: 2px;
