@@ -10,7 +10,7 @@ Updated: 2023-04-01 16:18:29
 */
 
 :root {
-    --main-font: "Roboto";
+    --main-font: 'Roboto';
     --accent-font: "Fjalla One";
 
 }
@@ -202,7 +202,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: rgba(245, 245, 245,0.5);
+    background: rgba(245, 245, 245,0.25);
 }
 
 .homeHeaderDownArrow img {
@@ -237,12 +237,13 @@ body {
 
 #fadeOut div:nth-child(2) {
     font-family: sans-serif; /* Fall back for legacy browsers */
-    font-family: var(--main-font);
+    font-family: var(--accent-font);
     font-weight: 400;
     background-color: transparent;
     color: #000;
     font-size: 20px;
     height: 10%;
+    line-height: 30px;
 }
 
 .homeHeaderDownArrow {
@@ -803,15 +804,33 @@ a {
     text-transform: capitalize;
 }
 
+.homepageTitles img {
+    width: 200px;
+    margin: 0 0 20px;
+}
 
-@media only screen and (max-width: 1024px){
+
+@media only screen and (max-width: 1023px){
     .ctaBoxContent h1 {
         font-size: 24px;
     }
 
     .homepageTitles img {
-        width: 320px;
+        width: 220px;
         margin: 0 0 45px;
+    }
+
+    .headerImages {
+        width: 100%;
+        height: 300px;
+    }
+
+}
+
+@media only screen and (max-width: 979px){
+    
+    .locationMap {
+        display: none;
     }
 }
 
@@ -827,20 +846,23 @@ a {
 
 @media only screen and (max-width: 767px){
 
-    .contactInfo {
-        flex-direction: column;
+    .tastingLocationInfo {
+        height: 300px;
+        width: 50%;
     }
 
-    .locationInfoRow {
-        flex-direction: column;
-    }
-
-    .locationMap, .tastingLocationInfo {
-        width: 100%;
+    .headerImages {
+        height: 175px;
+        font-size: 30px;
     }
 
     .tastingLocationInfo {
-        padding: 3% 100px 5%;
+        height: 300px;
+        justify-content: space-evenly;
+    }
+
+    .tastingLocationInfo {
+        padding: 3% 10px 5%;
     }
 
     .flip-card {
@@ -861,6 +883,14 @@ a {
 }
 
 @media only screen and (max-width: 600px){
+
+    .locationInfoRow {
+        flex-direction: column;
+    }
+
+    .contactInfo {
+        flex-direction: column;
+    }
     
     .tastingLocationInfo {
         padding: 3% 15px 5%;

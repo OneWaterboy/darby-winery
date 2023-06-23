@@ -34,9 +34,9 @@ add_action( 'admin_enqueue_scripts', 'enqueuing_admin_scripts' );
 // Add in Custom Google Fonts
 
 function google_fonts() {
-    wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap', false );
-    wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css2?family=Fjalla+One&display=swap', false );
-    wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css2?family=Fjalla+One&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap', false );
+    wp_enqueue_style( 'playfair-font', '//fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap', false );
+    wp_enqueue_style( 'fjalla-font', '//fonts.googleapis.com/css2?family=Fjalla+One&display=swap', false );
+    wp_enqueue_style( 'roboto-font', '//fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap', false );
 }
 
 add_action( 'wp_enqueue_scripts', 'google_fonts' );
