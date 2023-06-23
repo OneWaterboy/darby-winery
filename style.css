@@ -1,0 +1,1069 @@
+/*
+Theme Name: Darby Winery
+Theme URI: https://abrahmrollins.com
+Template: astra
+Author: Abrahm Rollins
+Author URI: https://abrahmrollins.com
+Version: 4.1.2.1680365909
+Updated: 2023-04-01 16:18:29
+
+*/
+
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.locationdetailsLineItem.address {
+    display: flex;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 400px;
+    height: 400px;
+    perspective: 1000px;
+    margin: 0 2%;
+}
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner,
+  .flip-card:active .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: #a07825;
+    color: #FFF;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color: #a07825;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+  /* End Flip Cards */
+
+.learnMoreButton.flipCardDetails {
+    width: fit-content;
+    margin: 0 auto;
+    border: 2px solid;
+    padding: 5px 30px;
+}
+
+.flipCardDetails span:first-child {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 2px;
+}
+
+.tastingWineTitle {
+    font-family: "Fjalla One",sans-serif;
+    font-size: 25px;
+    text-align: center;
+}
+
+.tastingListHeader div:first-child {
+    font-family: "Fjalla One", sans-serif;
+    font-size: 48px;
+}
+
+.tastingListHeader {
+    margin: 100px auto;
+    text-align: center;
+    padding: 0 0 20px;
+    height: fit-content;
+    line-height: 50px;
+}
+
+.tastingListHeader div:nth-child(2) {
+    font-size: 18px;
+    font-style: italic;
+    text-transform: capitalize;
+}
+
+.tastingFlipCards {
+    display: flex;
+    margin: 0 auto 100px;
+    width: 90%;
+}
+
+.locationInfoRow {
+    display: flex;
+}
+
+.locationDetailsIcon {
+    width: 24px;
+    height: 24px;
+    margin-right: 20px;
+}
+
+.locationMap, .tastingLocationInfo {
+    width: 33%;
+    height: 400px;
+}
+
+.locationInfoRow .tastingLocationInfo:nth-child(odd) {
+    background: whitesmoke;
+}
+
+.tastingLocationInfo {
+    display: flex;
+    flex-direction: column;
+    padding: 3% 60px 5%;
+    justify-content: space-around;
+    font-weight: 500;
+}
+
+.locationInfoTitle {
+    font-family: "Fjalla One", sans-serif;
+    font-size: 30px;
+    height: 10%;
+}
+
+.tastingRoomDetails {
+    height: 65%;
+    color: rgb(160, 120, 37);
+}
+
+.locationdetailsLineItem.hours {
+    display: flex;
+}
+
+.locationHoursList {
+    display: flex;
+    flex-direction: column;
+}
+
+.locationdetailsLineItem {
+    padding: 10px 0;
+}
+
+.headerVideo {
+    width: 100%;
+    max-height: 500px;
+    display: flex;
+    justify-content: right;
+}
+
+.headerVideo video {
+    height: 490px;
+}
+
+#primary-site-navigation-desktop {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.menu-link {
+    cursor: pointer;
+}
+
+#fadeOut {
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    top: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(245, 245, 245,0.5);
+}
+
+.homeHeaderDownArrow img {
+    width: 48px;
+}
+
+.homepageIntroText {
+    width: 75%;
+    margin: 40px auto;
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.fadeInUp-animation {
+    line-height: 110px;
+}
+
+#fadeOut .homepageTitles {
+    font-family: 'Fjalla One', sans-serif;
+    font-weight: 500;
+    background-color: transparent;
+    color: #000;
+    font-size: 80px;
+    height: 80%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#fadeOut div:nth-child(2) {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    background-color: transparent;
+    color: #000;
+    font-size: 20px;
+    height: 10%;
+}
+
+.homeHeaderDownArrow {
+  justify-self: left;
+  height: 10%;
+}
+
+@keyframes fadeInUp {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    50% {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+  
+  .fadeInUp-animation {
+    animation: 5s fadeInUp;
+  }
+
+  @keyframes fadeInSecond {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    50% {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+  
+  .fadeInSecond-animation {
+    animation: 10s fadeInSecond;
+  }
+
+#footerSocialLinks a img {
+    width: 24px;
+}
+
+.ctaBoxContent {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.ctaBoxContent h1 {
+    margin: 0 0 5%;
+    font-family: 'Fjalla One', sans-serif;
+    letter-spacing: 2px;
+    font-size: 40px;
+    color: #FFF;
+}
+
+.ctaBoxContent a {
+    border: 2px solid #FFF;
+    padding: 10px 20px;
+    color: #FFF;
+    width: fit-content;
+    text-align: center;
+}
+
+.ctaBoxContainer {
+    flex-basis: 45%;
+    height: 400px;
+    background-position: center;
+    background-size: cover;
+    margin: 2% 0 0;
+}
+
+.ctaBoxes {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    margin: 0 auto 80px;
+}
+
+.headerImages {
+    width: 100%;
+    height: 475px;
+    background: no-repeat center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    background-size: cover;
+    font-size: 50px;
+    font-family: 'Fjalla one' , sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.listItemTop {
+    width: 80%;
+}
+
+.site-title {
+    display: none;
+}
+
+.locationDetails {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex-basis: 45%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.teamMemberImage {
+    width: 200px;
+}
+
+.teamMember {
+    display: flex;
+    width: 28%;
+    flex-direction: column;
+}
+
+.teamMembers {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.teamMemberDetails {
+    width: 200px;
+}
+
+.teamMemberSocialLinks img {
+    height: 25px;
+    margin: 0 5px;
+}
+
+.teamMemberSocialLinks {
+    display: flex;
+    justify-content: center;
+}
+
+p.teamMemberName {
+    margin: 0 0 10px;
+    font-size: 30px;
+    font-family: 'Fjalla One';
+    color: #a07825;
+}
+
+.teamMemberImage {
+    width: 200px;
+    border-radius: 90%;
+    margin: 0 0 15px;
+}
+
+p.teamMemberPosition {
+    margin: 0 0 5px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+p.teamMemberFavorite {
+    font-style: italic;
+}
+
+.teamMembersLayout {
+    margin: 100px 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+h1.pageHeaderText, 
+h3.pageSubHeaderText {
+    color: #FFF;
+    font-family: 'Fjalla One', sans-serif;
+    letter-spacing: 5px;
+}
+
+span.phoneLink {
+    /* font-weight: bold; */
+    font-size: 20px;
+    margin: 20px 0;
+    font-family: 'Fjalla One', sans-serif;
+}
+
+span.phoneLink a {
+    letter-spacing: 2px;
+    padding: 0 10px;
+}
+
+.storeHours.contactPage {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0 30px;
+    font-style: italic;
+    /* font-weight: bold; */
+}
+
+.streetAddress, 
+.cityStateZip {
+    font-size: 17px;
+}
+
+h1.pageHeaderText {
+    font-size: 60px;
+}
+
+.contactInfo {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    padding: 75px 0;
+}
+
+div#wpforms-3947 {
+    width: 80%;
+    margin: 100px auto;
+}
+
+div#wpforms-3947 .wpforms-field-label {
+    font-size: 20px;
+}
+
+div#wpforms-3947 button {
+    border: 3px solid #a07825;
+    color: #a07825;
+    /* font-weight: bold; */
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-family: 'Fjalla One', sans-serif;
+    background: #FFF;
+    border-radius: 2px;
+    font-size: 20px;
+}
+
+h1.locationTitle {
+    font-size: 30px;
+    text-align: center;
+}
+
+.bottleImage img {
+    height: 800px;
+}
+
+.wineTastings {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-evenly;
+}
+
+.wineList {
+    width: 50%;
+}
+
+.wineListItem {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottleCost {
+    font-style: italic;
+    /* font-weight: bold; */
+}
+
+.wineTastingHeader {
+    width: 60%;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.contactDetails {
+    display: flex;
+    width: 85%;
+    justify-content: space-between;
+    margin: 50px auto 80px;
+    color: #000;
+}
+
+.locationLinks {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 40px 0 0;
+    font-size: 20px;
+    flex-direction: column;
+}
+
+.locationLinks a {
+    margin: 20px 0 0;
+    font-style: italic;
+}
+
+.locationAddress {
+    display: flex;
+    flex-direction: column;
+    margin: 40px 0;
+    font-size: 20px;
+}
+
+.addressHeader {
+    text-transform: capitalize;
+    /* font-weight: bold; */
+    margin: 0 0 10px;
+}
+
+.locationHours {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    font-style: italic;
+    color: #000;
+}
+
+.wineList {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.wineName {
+    font-size: 24px;
+    /* font-weight: bold; */
+    font-style: italic;
+}
+
+.wineType {
+    margin-left: 10px;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.wineYear {
+    font-size: 20px;
+    margin-left: 15px;
+}
+
+
+
+.homeHeader,
+.tastingRoomHeaders {
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.homeHeader .header-content {
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    color: #a07825;  
+}
+
+.goldHeadings p {
+    font-size: 48px;
+    color: #a07825;
+    text-align: center;
+    font-family: Playfair Display;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.paragraphText p {
+    font-size: 18px;
+    color: #3e3e3e;
+    line-height: 2;
+    text-align: center;
+    font-family: Open Sans;
+    font-weight: 300;
+    font-style: normal;
+}
+
+#homeCardLinks {
+    min-width: 95%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.whiteTextHeading p {
+    color: #FFF;
+    text-align: center;
+    font-family: Playfair Display;
+    /* font-weight: bold; */
+    font-style: normal;
+    font-size: 36px;
+    line-height: 1.5;
+}
+
+#homeCardLinks .whiteTextHeading {
+    margin: 0 !important;
+}
+
+.homeCardSubHeader p {
+    font-size: 16px;
+    color: #FFF;
+    line-height: 1.5;
+    text-align: center;
+    font-family: Open Sans;
+    /* font-weight: bold; */
+    font-style: normal;
+    text-transform: uppercase;
+    
+}
+
+#homeCardLinks .homeCardSubHeader {
+    margin: 0 !important;
+    padding: 5px 10px 50px;
+}
+
+.whiteSeeThroughButton {
+    border: 2px solid #FFF;
+    font-family: open sans;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #FFF;
+    font-weight: 500;
+}
+
+#homeCardLinks .et_pb_column {
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 32%;
+    margin: 0 !important;
+}
+
+.homeHeader h1,
+.tastingRoomHeaders h1 {
+    color: #ffffff;
+    text-align: center;
+    font-family: Playfair Display;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.homeHeader h1 {
+    font-size: 90px;
+}
+
+.tastingRoomHeaders h1 {
+    font-size: 50px;
+}
+
+#post-494 .paragraphText .et_pb_text_inner, 
+#post-494 .paragraphText .et_pb_text_inner p {
+    text-align: left;
+    font-family: Open Sans;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 18px;
+    color: #000;
+    line-height: unset;
+}
+
+.leftAlignedParagraph {
+    font-family: open sans;
+}
+
+.headerContact img {
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+}
+
+.headerContact {
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+}
+
+.headerContact div {
+    align-items: center;
+}
+
+.headerContact div {
+    align-items: center;
+    margin-left: 20px;
+    display: flex;
+}
+
+.ast-mobile-header-wrap .ast-above-header-bar, .ast-above-header-bar .site-above-header-wrap {
+    min-height: 30px !important;
+}
+
+.ast-above-header.ast-above-header-bar {
+    background-color: whitesmoke;
+}
+
+.aboutText {
+    width: 90%;
+    margin: 40px auto 20px;
+}
+
+.aboutImages {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    border-bottom: 2px dashed #000;
+    padding: 0 0 20px;
+}
+
+.aboutDarby h1 {
+    width: 90%;
+    margin: 40px auto 0;
+    text-align: center;
+    font-family: 'Fjalla One',sans-serif;
+    letter-spacing: 2px;
+}
+
+.aboutImages img {
+    height: 250px;
+}
+
+@media only screen and (max-width: 1024px){
+    .ctaBoxContent h1 {
+        font-size: 24px;
+    }
+}
+
+@media only screen and (max-width: 767px){
+
+    .contactInfo {
+        flex-direction: column;
+    }
+
+    .locationInfoRow {
+        flex-direction: column;
+    }
+
+    .locationMap, .tastingLocationInfo {
+        width: 100%;
+    }
+
+    .tastingLocationInfo {
+        padding: 3% 100px 5%;
+    }
+
+    .flip-card {
+        width: 300px;
+    }
+
+    .tastingListHeader div:first-child {
+        font-size: 36px;
+    }
+
+    .tastingListHeader {
+        margin: 50px auto;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    
+    .tastingLocationInfo {
+        padding: 3% 15px 5%;
+    }
+
+    .tastingFlipCards {
+        width: 90%;
+        flex-wrap: wrap;
+    }
+
+    .flip-card {
+        margin: 0 auto 20px;
+    }
+
+    .flip-card {
+        width: 300px;
+    }
+
+    .tastingListHeader div:first-child {
+        font-size: 22px;
+    }
+
+    .tastingListHeader div:nth-child(2) {
+        font-size: 12px;
+    }
+
+    .headerImages {
+        height: 250px;
+        font-size: 26px;
+    }
+}
+
+@media only screen and (max-width: 479px){
+
+    .wineList {
+        width: 90%;
+    }
+
+    .bottleImage img {
+        display: none;
+    }
+
+    .winePrices div {
+        display: none;
+    }
+}
+
+/* Bootstrap Timeline for About Darby Page */
+
+.timeline {
+    position: relative;
+    /* background: #272e48; */
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    padding: 5rem;
+    margin: 0 auto 1rem auto;
+    overflow: hidden;
+}
+
+.timelineTastingLinks {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.timeline-content h4 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 22px;
+}
+
+.timeline-content,
+.timeline-content h4,
+.timelineTastingLinks a {
+    color: #FFFFFF;
+}
+
+.timelineTastingLinks a{
+    text-decoration: underline;
+}
+
+.timeline-content img {
+    height: 50px;
+    margin: 0 0 10px;
+}
+
+.timeline:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -2px;
+    border-right: 2px dashed #4b546f;
+    height: 100%;
+    display: block;
+}
+
+.timeline-row {
+    padding-left: 50%;
+    position: relative;
+    margin-bottom: 30px;
+}
+.timeline-row .timeline-time {
+    position: absolute;
+    right: 50%;
+    top: 15px;
+    text-align: right;
+    margin-right: 20px;
+    color: #000000;
+    font-size: 1.5rem;
+}
+.timeline-row .timeline-time small {
+    display: block;
+    font-size: 0.8rem;
+}
+.timeline-row .timeline-content {
+    position: relative;
+    padding: 20px 30px;
+    background: #a07825;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.timeline-row .timeline-content:after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    height: 16px;
+    width: 16px;
+    background: #1a233a;
+}
+.timeline-row .timeline-content:before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: -49px;
+    width: 20px;
+    height: 20px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+    z-index: 10;
+    background: #272e48;
+    border: 2px dashed #4b546f;
+}
+.timeline-row .timeline-content h4 {
+    margin: 0 0 20px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    line-height: 150%;
+}
+.timeline-row .timeline-content p {
+    margin-bottom: 30px;
+    line-height: 150%;
+}
+.timeline-row .timeline-content i {
+    font-size: 1.2rem;
+    line-height: 100%;
+    padding: 15px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+    background: #272e48;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.timeline-row .timeline-content .thumbs {
+    margin-bottom: 20px;
+    display: flex;
+}
+.timeline-row .timeline-content .thumbs img {
+    margin: 5px;
+    max-width: 60px;
+}
+.timeline-row .timeline-content .badge {
+    color: #ffffff;
+    background: linear-gradient(120deg, #00b5fd 0%, #0047b1 100%);
+}
+.timeline-row:nth-child(even) .timeline-content {
+    margin-left: 40px;
+    text-align: left;
+}
+.timeline-row:nth-child(even) .timeline-content:after {
+    left: -8px;
+    right: initial;
+    border-bottom: 0;
+    border-left: 0;
+    transform: rotate(-135deg);
+}
+.timeline-row:nth-child(even) .timeline-content:before {
+    left: -52px;
+    right: initial;
+}
+.timeline-row:nth-child(odd) {
+    padding-left: 0;
+    padding-right: 50%;
+}
+.timeline-row:nth-child(odd) .timeline-time {
+    right: auto;
+    left: 50%;
+    text-align: left;
+    margin-right: 0;
+    margin-left: 20px;
+}
+.timeline-row:nth-child(odd) .timeline-content {
+    margin-right: 40px;
+}
+.timeline-row:nth-child(odd) .timeline-content:after {
+    right: -8px;
+    border-left: 0;
+    border-bottom: 0;
+    transform: rotate(45deg);
+}
+
+@media (max-width: 992px) {
+    .timeline {
+        padding: 15px;
+    }
+    .timeline:after {
+        border: 0;
+    }
+    .timeline .timeline-row:nth-child(odd) {
+        padding: 0;
+    }
+    .timeline .timeline-row:nth-child(odd) .timeline-time {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin: 0 0 10px 0;
+    }
+    .timeline .timeline-row:nth-child(odd) .timeline-content {
+        margin: 0;
+    }
+    .timeline .timeline-row:nth-child(odd) .timeline-content:before {
+        display: none;
+    }
+    .timeline .timeline-row:nth-child(odd) .timeline-content:after {
+        display: none;
+    }
+    .timeline .timeline-row:nth-child(even) {
+        padding: 0;
+    }
+    .timeline .timeline-row:nth-child(even) .timeline-time {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin: 0 0 10px 0;
+        text-align: left;
+    }
+    .timeline .timeline-row:nth-child(even) .timeline-content {
+        margin: 0;
+    }
+    .timeline .timeline-row:nth-child(even) .timeline-content:before {
+        display: none;
+    }
+    .timeline .timeline-row:nth-child(even) .timeline-content:after {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .timeline-content h4 {
+        font-size: 14px;
+    }
+}

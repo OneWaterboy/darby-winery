@@ -1,0 +1,15 @@
+/*
+Theme Name: DarbyWinery
+Theme URI: https://abrahmrollins.com
+Template: Divi
+Author: Elegant Themes
+Author URI: http://abrahmrollins.com
+Description: Smart. Flexible. Beautiful. Divi is the most powerful theme in our collection.
+Version: 4.15.1.1655266272
+Updated: 2022-06-15 04:11:12
+
+*/
+
+.wp-menu-image.dashicons-before img {
+    max-width: 24px;
+}
