@@ -222,7 +222,8 @@ body {
 }
 
 #fadeOut .homepageTitles {
-    font-family: 'Fjalla One', sans-serif;
+    font-family: sans-serif; /* Fall back for legacy browsers */
+    font-family: var(--accent-font);
     font-weight: 500;
     background-color: transparent;
     color: #000;
@@ -235,7 +236,8 @@ body {
 }
 
 #fadeOut div:nth-child(2) {
-    font-family: "Roboto", sans-serif;
+    font-family: sans-serif; /* Fall back for legacy browsers */
+    font-family: var(--main-font);
     font-weight: 400;
     background-color: transparent;
     color: #000;
@@ -292,7 +294,8 @@ body {
 
 .ctaBoxContent h1 {
     margin: 0 0 5%;
-    font-family: 'Fjalla One', sans-serif;
+    font-family: sans-serif; /* Fall back for legacy browsers */
+    font-family: var(--accent-font);
     letter-spacing: 2px;
     font-size: 40px;
     color: #FFF;
@@ -332,7 +335,8 @@ body {
     color: #FFF;
     background-size: cover;
     font-size: 50px;
-    font-family: 'Fjalla one' , sans-serif;
+    font-family: sans-serif; /* Fall back for legacy browsers */
+    font-family: var(--accent-font);
     text-transform: uppercase;
     letter-spacing: 2px;
 }
@@ -386,7 +390,8 @@ body {
 p.teamMemberName {
     margin: 0 0 10px;
     font-size: 30px;
-    font-family: 'Fjalla One';
+    font-family: sans-serif; /* Fall back for legacy browsers */
+    font-family: var(--accent-font);
     color: #a07825;
 }
 
@@ -415,7 +420,8 @@ p.teamMemberFavorite {
 h1.pageHeaderText, 
 h3.pageSubHeaderText {
     color: #FFF;
-    font-family: 'Fjalla One', sans-serif;
+    font-family: sans-serif; /* Fall back for legacy browsers */
+    font-family: var(--accent-font);
     letter-spacing: 5px;
 }
 
@@ -423,7 +429,8 @@ span.phoneLink {
     /* font-weight: bold; */
     font-size: 20px;
     margin: 20px 0;
-    font-family: 'Fjalla One', sans-serif;
+    font-family: sans-serif; /* Fall back for legacy browsers */
+    font-family: var(--accent-font);
 }
 
 span.phoneLink a {
@@ -471,7 +478,8 @@ div#wpforms-3947 button {
     /* font-weight: bold; */
     text-transform: uppercase;
     letter-spacing: 3px;
-    font-family: 'Fjalla One', sans-serif;
+    font-family: sans-serif; /* Fall back for legacy browsers */
+    font-family: var(--accent-font);
     background: #FFF;
     border-radius: 2px;
     font-size: 20px;
@@ -757,7 +765,8 @@ a {
     width: 90%;
     margin: 40px auto 0;
     text-align: center;
-    font-family: 'Fjalla One',sans-serif;
+    font-family: sans-serif; /* Fall back for legacy browsers */
+    font-family: var(--accent-font);
     letter-spacing: 2px;
 }
 
@@ -799,7 +808,22 @@ a {
     .ctaBoxContent h1 {
         font-size: 24px;
     }
+
+    .homepageTitles img {
+        width: 320px;
+        margin: 0 0 45px;
+    }
 }
+
+/* Setting Special Break point for the overlay on the video - mobile menu height is smaller than desktop */
+@media only screen and (max-width: 924px){
+
+    #fadeOut {
+        top: 80px;
+    }
+
+}
+
 
 @media only screen and (max-width: 767px){
 
@@ -829,6 +853,10 @@ a {
 
     .tastingListHeader {
         margin: 50px auto;
+    }
+
+    .homepageTitles img {
+        width: 220px;
     }
 }
 
@@ -863,9 +891,61 @@ a {
         height: 250px;
         font-size: 26px;
     }
+
+    div#homepageOfferings {
+        flex-direction: column;
+        flex-wrap: unset;
+        width: 80%;
+    }
+
+    .ctaBoxContainer {
+        height: 600px;
+    }
+
+    div#homepageOfferings {
+        flex-direction: column;
+        flex-wrap: unset;
+        width: 60%;
+        height: 1000px;
+    }
+}
+
+@media only screen and (min-width: 479px) and (max-width: 600px){
+    .homepageTitles {
+        align-items: end;
+    }
+
+    .homepageTitles img {
+        width: 220px;
+    }
+
 }
 
 @media only screen and (max-width: 479px){
+
+    .homepageTitles img {
+        width: 50%;
+        margin: 0 auto 50px;
+    }
+
+    div#homepageOfferings {
+        width: 85%;
+        flex-direction: column;
+        flex-wrap: unset;
+    }
+
+    div#homepageOfferings.ctaBoxes {
+        height: 700px;
+    }
+
+    .ctaBoxContent a {
+        width: 50%;
+    }
+
+    #fadeOut div:nth-child(2) {
+        font-weight: 500;
+        font-size: 24px;
+    }
 
     .wineList {
         width: 90%;
