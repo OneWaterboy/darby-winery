@@ -210,17 +210,17 @@ body {
     background: rgba(0,0,0,0.4);
 }
 
-.flipCardDetails {
+.flip-card-front .flipCardDetails {
     display: flex;
     justify-content: space-between;
 }
 
-.flipCardDetails span:first-child {
+.flip-card-front .flipCardDetails span:first-child {
     width: 20%;
     text-align: left;
 }
 
-.flipCardDetails span:nth-child(2) {
+.flip-card-front .flipCardDetails span:nth-child(2) {
     width: 60%;
     text-align: left;
 }
