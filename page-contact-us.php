@@ -20,8 +20,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header(); ?>
 
 	<div id="primary" <?php astra_primary_class(); ?>>
-		<div class="locationInfoRow">
-		<div class="tastingLocationInfo">
+		<div class="locationInfoRow contact">
+		<div class="tastingLocationInfo contact">
 				<div class="locationInfoTitle">General Inquiries</div>
 				<div class="tastingRoomDetails">
 					<div class="locationdetailsLineItem">
@@ -42,7 +42,7 @@ get_header(); ?>
 					</div>
 				</div>
 			</div>
-			<div class="tastingLocationInfo">
+			<div class="tastingLocationInfo contact">
 				<div class="locationInfoTitle">Contact Woodinville</div>
 				<div class="tastingRoomDetails">
 					<div class="locationdetailsLineItem">
@@ -63,7 +63,7 @@ get_header(); ?>
 					</div>
 				</div>
 			</div>
-			<div class="tastingLocationInfo">
+			<div class="tastingLocationInfo contact">
 				<div class="locationInfoTitle">Contact Seattle</div>
 				<div class="tastingRoomDetails">
 					<div class="locationdetailsLineItem">

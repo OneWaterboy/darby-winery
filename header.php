@@ -59,14 +59,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	astra_content_before();
 	?>
-	<div id="content" class="site-content">
 
-	<?php if( is_front_page() ): ?>
-		<div class="headerVideo">
-			<video muted autoplay >
-				<source src="<?php echo get_stylesheet_directory_uri() . '/graphics/' . get_field('header_video_name','option'); ?>" type=video/mp4>
-			</video>
-		</div>
+<?php if( is_front_page() ): ?>
+		<div class="video-container">
+			<div class="headerVideo">
+				<video muted autoplay loop >
+					<source src="<?php echo get_stylesheet_directory_uri() . '/graphics/' . get_field('header_video_name','option'); ?>" type=video/mp4>
+				</video>
+			</div>
 			<div id="fadeOut">
 				<div class="homepageTitles">
 					<?php if( get_field('header_image_for_fade_in','option') ): ?>
@@ -74,15 +74,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<?php endif; ?>
 
 					<?php if( get_field('header_title_text_for_fade_in','option') ): ?>
-						<div class="fadeInUp-animation"><?php echo get_field('header_title_text_for_fade_in','option'); ?></div>
+						<div style="color: <?php echo get_field('home_page_text_color','option'); ?>;" class="fadeInUp-animation"><?php echo get_field('header_title_text_for_fade_in','option'); ?></div>
 					<?php endif; ?>
 
 					<?php if( get_field('header_sub_text_for_fade_in','option') ): ?>
-						<div class="fadeInSecond-animation"><?php echo get_field('header_sub_text_for_fade_in','option'); ?></div>
+						<div style="color: <?php echo get_field('home_page_text_color','option'); ?>;" class="fadeInSecond-animation"><?php echo get_field('header_sub_text_for_fade_in','option'); ?></div>
 					<?php endif; ?>
 				</div>
-				<a class="homeHeaderDownArrow" href="#homepageOfferings"><img src="/wp-content/uploads/2023/04/down-arrow.png" /></a>
+				<a class="homeHeaderDownArrow" href="#homepageOfferings"><img src="<?php echo get_stylesheet_directory_uri() . '/graphics/down-arrow.png'; ?>" /></a>
 			</div>
+		</div>
 		<?php endif; ?>
 		
 		<?php if( !is_front_page() ): ?>
@@ -92,6 +93,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 					}?>
 				</div>
 		<?php endif; ?>
+	<div id="content" class="site-content">
+
+	
 
 		<div class="ast-container">
 		<?php astra_content_top(); ?>

@@ -29,6 +29,11 @@ function enqueuing_admin_scripts(){
  
 }
 
+function cwpai_enqueue_responsive_stylesheet() {
+    wp_enqueue_style( 'responsive-styles', get_stylesheet_directory_uri() . '/responsive.css', array(), '1.0' );
+}
+add_action( 'wp_enqueue_scripts', 'cwpai_enqueue_responsive_stylesheet' );
+
 add_action( 'admin_enqueue_scripts', 'enqueuing_admin_scripts' );
 
 // Add in Custom Google Fonts

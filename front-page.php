@@ -37,16 +37,17 @@ get_header(); ?>
 					
 					<div class="ctaBoxContainer" style=" background-image: url('<?php echo the_sub_field('cta_box_background_image' , 'option'); ?>);">
 						<div class="ctaBoxContent">
-							<h1><?php echo the_sub_field('main_title_for_cta_card' , 'option'); ?></h1>
-							<h2><?php echo the_sub_field('cta_card_sub_title' , 'option'); ?></h2>
-							<a href="<?php echo the_sub_field('cta_button_link' , 'option'); ?>">
-								<span><?php echo the_sub_field('cta_button_text' , 'option'); ?></span>
-							</a>
+							<div class="cta-box-text">
+								<h1><?php echo the_sub_field('main_title_for_cta_card' , 'option'); ?></h1>
+								<h2><?php echo the_sub_field('cta_card_sub_title' , 'option'); ?></h2>
+								<a href="<?php echo the_sub_field('cta_button_link' , 'option'); ?>">
+									<span><?php echo the_sub_field('cta_button_text' , 'option'); ?></span>
+								</a>
+							</div>
+							<div class="fadeOutLayover">
+								<!-- Used to Fade Images so text will show better -->
+							</div>
 						</div>
-						<div class="fadeOutLayover">
-
-						</div>
-						
 					</div>
 					
 				<?php endwhile; ?>
