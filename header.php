@@ -59,7 +59,25 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	astra_content_before();
 	?>
-
+	<?php if( have_rows('announcement_bar' , 'option') ): ?>
+			<?php while ( have_rows('announcement_bar' , 'option') ) : the_row(); ?>
+				<?php if( get_sub_field('announcement_bar_active') == 'yes' ) : ?>
+					<div class="announcment-bar" 
+							style="
+								font-size: <?php echo get_sub_field('announcement_bar_font_size'); ?>px; 
+								background-color: <?php echo get_sub_field('announcement_bar_background_color'); ?>; 
+								color:<?php echo get_sub_field('announcement_bar_text_color'); ?> ;
+								<?php if( get_sub_field('announcement_bar_font_weight') == 'bold'): ?>
+									font-weight: bold;
+								<?php endif; ?>
+								<?php if( get_sub_field('announcement_bar_letter_case') == 'uppercase'): ?>
+									text-transform: uppercase;
+								<?php endif; ?>">
+						<span><?php echo get_sub_field('announcement_bar_text') ?></span>
+					</div>
+				<?php endif; ?>
+			<?php endwhile; ?>
+	<?php endif; ?>
 <?php if( is_front_page() ): ?>
 		<div class="video-container">
 			<div class="headerVideo">
